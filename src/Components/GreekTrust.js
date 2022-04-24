@@ -109,10 +109,12 @@ function GreekTrust() {
     }
 
     function ChartDestination(previous_planet,select_planet,select_vehicle,destinations,vehicles) {
+        let previous_vehicle = destinations.hasOwnProperty(previous_planet) ? destinations[previous_planet] : null
         let current_Vehicle = destinations.hasOwnProperty(select_planet) ? destinations[select_planet] : null
         let selected_destinations = destinations
         let available_vehicles = vehicles.map(avail_Vehicle => {
             let total_no = avail_Vehicle.total_no
+            if (previous_planet !== null && avail_Vehicle.name === previous_vehicle) total_no += 1
             if (current_Vehicle !== null && avail_Vehicle.name === current_Vehicle) total_no += 1
             if (avail_Vehicle.name === select_vehicle) total_no -= 1
             return {
