@@ -24,8 +24,8 @@ function PlanetOption(props) {
         setSelectVehicle("new_vehicle")
         setSelectPlanet(event.target.value)
         setDistance(FindDistanceToPlanet(event.target.value))
-        props.setDestination(selectPlanet,event.target.value,null,props.destination,props.vehicles)
-    }
+        props.setDestination(selectPlanet,event.target.value,selectVehicle,props.destination,props.vehicles)
+    } 
 
     function handleVehicleChange (event,selectPlanet) {
         setSelectVehicle(event.target.value)
