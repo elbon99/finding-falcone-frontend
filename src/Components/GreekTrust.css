@@ -1,0 +1,25 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 88vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inner-container {
+    display: flex;
+}
+
+.inner-container > span {
+    padding-top: 50px;
+}
+
+.disabled {
+    color: gray;
+}

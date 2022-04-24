@@ -1,0 +1,14 @@
+.select-destination {
+    margin: 0px 20px;
+    width: 150px;
+    height: 175px;
+}
+
+.vehicles {
+    display:flex;
+    flex-direction: column;
+}
+
+.inner-vehicles {
+    display: block;
+}

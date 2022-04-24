@@ -1,0 +1,23 @@
+.header {
+    position: absolute;
+    font-size: 30px;
+    top: 1vh;
+    left: 40vw;
+}
+
+.header-buttons {
+    position: fixed;
+    right: 0px;
+    top: 10px;
+}
+
+.header-buttons > input, .header-buttons > a > input{
+    background-color: white;
+    margin: 0px 20px;
+    border-width: 0px !important;
+}
+
+.line {
+    border-left: 3px solid black;
+    height: 5px
+}

@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import GreekTrust from './Components/GreekTrust'
+import Success from './Components/Success';
+
+export const backendAPI = {
+  "endpoint" : "https://findfalcone.herokuapp.com"
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<GreekTrust />} />
+          <Route exact path='/success' element={<Success />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
