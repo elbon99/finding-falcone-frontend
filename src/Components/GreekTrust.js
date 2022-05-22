@@ -140,13 +140,13 @@ function GreekTrust() {
             <Header reset={() => ResetInputs()} />
             <div className="page-container">
                 <div className='container'>
-                    <h3>Select planets you want to search in:</h3>
+                    <h3 className='display-header'>Select planets you want to search in:</h3>
                     <div className="inner-container">
                         {indexArray.map(idx => (
                                 <PlanetOption key={idx} index={idx} planets={planets}
                                 vehicles={availableVehicles}  destination={destination} setDestination={ChartDestination}/>
                             ) )}
-                        <span className='select-destination'>Time Taken: {CalculateTimeTaken(destination,availableVehicles,planets)}</span> 
+                        <div className='select-destination time-taken'>Time Taken: {CalculateTimeTaken(destination,availableVehicles,planets)}</div> 
                     </div>
                 </div>
                 <input type="button" value="Find Falcone!" className='other-button' onClick={() => FindFalcone(destination,token,availableVehicles,planets)} />

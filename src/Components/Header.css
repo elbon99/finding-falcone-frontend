@@ -2,7 +2,8 @@
     position: absolute;
     font-size: 30px;
     top: 1vh;
-    left: 40vw;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .header-buttons {
@@ -20,4 +21,22 @@
 .line {
     border-left: 3px solid black;
     height: 5px
+}
+
+.toggle-button {
+    display: none !important;
+}
+
+@media only screen and (max-width: 920px) {
+    .header {
+        position: relative;
+    }
+
+    .header-buttons > input, .header-buttons > a, .header-buttons > span  {
+        display: none;
+    }
+
+    .toggle-button {
+        display: block !important;
+    }
 }

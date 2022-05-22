@@ -23,3 +23,16 @@
 .disabled {
     color: gray;
 }
+
+@media only screen and (max-width: 920px) {
+    .page-container {
+        justify-content: center;
+    }
+    .inner-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .time-taken {
+        height: 50px !important;
+    }
+}

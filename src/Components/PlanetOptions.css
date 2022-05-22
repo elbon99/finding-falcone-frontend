@@ -12,3 +12,15 @@
 .inner-vehicles {
     display: block;
 }
+
+@media only screen and (max-width: 920px) {
+    .select-destination {
+        display: flex;
+        width: 300px;
+        height: 100px;
+        flex-direction: row;
+    }
+    .display-header {
+        display: none;
+    }
+}
